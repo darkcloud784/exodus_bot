@@ -5,3 +5,15 @@ exports.run = (message, member) => {
     const recruit = recruitMsg.replace("{{user}}", member.user.tag);
     message.channel.send(recruit);
 };
+    exports.conf = {
+        enabled: true,
+        guildOnly: true,
+        aliases: ["recruiting", "apply"],
+        permLevel: "User"
+      };
+      exports.help = {
+        name: "recruit",
+        category: "Guild",
+        description: "Find out what we are currently looking for!",
+        usage: "?recruit"
+};
