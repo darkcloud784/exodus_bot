@@ -1,4 +1,4 @@
-module.exports = (client, message, member) => {
+module.exports = (client, member, message, args) => {
 
     const settings = client.getSettings(member.guild);
     
