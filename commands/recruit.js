@@ -1,8 +1,8 @@
-exports.run = (message, member) => {
+exports.run = (message) => {
     //const settings = message.settings = client.getSettings(message.guild);
-    const recruitMsg = "Hello {{user}}, We are currently in need of shamans of all specializations as well as caster dps and a couple hunters. Specically we would like to have more warlocks and boomkins. If your interested in joining, please message one of our officers!!";
-    const recruit = recruitMsg.replace("{{user}}", member.user.tag);
-    message.channel.send(recruit);
+    const recruitMsg = "We are currently in need of shamans of all specializations as well as caster dps and a couple hunters. Specically we would like to have more warlocks and boomkins. If your interested in joining, please message one of our officers!!";
+    //const recruit = recruitMsg.replace("{{user}}", message.user.tag);
+    message.channel.send(recruitMsg);
 };
     exports.conf = {
         enabled: true,
