@@ -5,15 +5,17 @@ const fs = require("fs");
 let baseConfig = fs.readFileSync("./config_base.txt", "utf8");
 
 const defaultSettings = {
-  "prefix": "~",
-  "modLogChannel": "mod-log",
-  "modRole": "Moderator",
-  "adminRole": "Administrator",
-  "systemNotice": "true",
-  "commandReply": "true",
+  "prefix": "?",
+  "modLogChannel": "moderator-only",
+  "modRole": "Officers",
+  "adminRole": "GM",
+  "systemNotice": "true", // This gives a notice when a user tries to run a command that they do not have permission to use.
+  "commandReply": "true", // Toggle this if you want the bot to ping the executioner or not.
   "welcomeChannel": "welcome",
-  "welcomeMessage": "Say hello to {{user}}, everyone! We all need a warm welcome sometimes :D",
-  "welcomeEnabled": "false"
+  "welcomeMessage": "Welcome {{user}} to the Exodus guild discord! Feel free to ping druidness or an officer if you need anything.",
+  "welcomeEnabled": "true",
+  "newUserMessage": "Hello {{user}}! I'm the Exodús server bot! I please reply with yes if you are an Exodús guild member. Not not, please reply with no so I can provide you with the appropriate role!",
+  "newUserRolesEnabled": "true"
 };
 
 const settings = new Enmap({

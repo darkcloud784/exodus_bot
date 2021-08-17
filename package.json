@@ -1,28 +1,20 @@
 {
-  "name": "guidebot",
+  "name": "exodus-bot-forked",
   "version": "1.0.0",
-  "description": "A boilerplate example bot with command handler and reloadable commands. Updated and Maintained by the Idiot's Guide Community",
+  "description": "originally created by idiots guide, but maintained and features added specifically for the Exodus Guild.",
   "main": "index.js",
   "scripts": {
-    "start": "node index.js",
-    "postinstall": "node setup.js"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "engines": {
     "node": ">=16"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AnIdiotsGuide/guidebot.git"
+    "url": "git+https://github.com/darkcloud784/exodusbot.git"
   },
-  "author": "Evelyne Lachance <eslachance@gmail.com> (http://evie.codes)",
-  "contributors": [
-    "York (http://anidiots.guide)"
-  ],
+  "author": "",
   "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/AnIdiotsGuide/guidebot/issues"
-  },
-  "homepage": "https://github.com/AnIdiotsGuide/guidebot#readme",
   "dependencies": {
     "@discordjs/builders": "^0.2.0",
     "chalk": "^4.1.1",
