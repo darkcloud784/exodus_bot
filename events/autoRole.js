@@ -1,8 +1,9 @@
 module.exports = (client, message, member) => {
 
     const settings = client.getSettings(member.guild);
-    if (settings.newUserRolesEnabled !== "true") return;
     
+    if (settings.newUserRolesEnabled !== "true") return;
+
     const newUserMessage = settings.newUserMessage.replace("{{user}}", member.newUserMessage.tag);
 
     member.send(newUserMessage).catch(console.error);
