@@ -5,7 +5,7 @@ module.exports = (client, member) => {
     if (settings.newUserRolesEnabled !== "true") return;
 
     const newUserMessage = settings.newUserMessage.replace("{{user}}", member.user.tag);
-    member.send(newUserMessage)
+    member.send(newUserMessage);
 
     if (message.content.toUpperCase() == 'YES' || message.content.toUpperCase() == 'Y' || message.content.toUpperCase() == 'YEP') {
         message.channel.send(`Thanks! I have put you in the members role. You should now be able to see the appropriate channels!`)
