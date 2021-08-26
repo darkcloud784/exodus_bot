@@ -1,4 +1,3 @@
-const { Message, Client } = require("discord.js");
 
 module.exports = (client, async (member) => {
 
