@@ -1,4 +1,4 @@
-module.exports = (messageReactionAdd, (reaction, user) => {
+module.exports = ('messageReactionAdd', (reaction, user) => {
 
     if (reaction.message.channel.id === '865566305842757632') {
         if (reaction.emoji.name == "Exods") {
