@@ -1,7 +1,5 @@
-module.exports = {
-    name: 'reactionrole',
-    description: 'reaction role message.',
-    async execute(message, args, Discord, client) {
+exports.run = async (message, args, Discord, client) => {
+    //async execute(message, args, Discord, client) {
         const channel = '865566305842757632';
         const memberRole = message.guild.roles.cache.find(role => role.name == "Members");
         const guestMember = message.guild.role.cache.find(role => role.name == "Guest");
@@ -19,4 +17,16 @@ module.exports = {
         let messageEmbed = await message.channel.send(embed);
     }
 
-}
+    exports.conf = {
+        enabled: true,
+        guildOnly: true,
+        aliases: ["reactionrole", "reaction"],
+        permLevel: "User"
+      };
+      exports.help = {
+        name: "reactionrole",
+        category: "Guild",
+        description: "reaction role message.",
+        usage: "?reactionrole"
+};
+
