@@ -2,7 +2,7 @@ exports.run = async (message, args, Discord, client) => {
     //async execute(message, args, Discord, client) {
         const channel = '865566305842757632';
         const memberRole = message.guild.roles.cache.find(role => role.name == "Members");
-        const guestMember = message.guild.role.cache.find(role => role.name == "Guest");
+        const guestMember = message.guild.roles.cache.find(role => role.name == "Guest");
 
         const memberEmoji = ':Exods:';
         const guestEmoji = ':bust_in_silhouette:';
