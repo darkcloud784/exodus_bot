@@ -1,35 +1,28 @@
 {
-  "name": "exodus-bot-forked",
+  "name": "exodus_bot",
   "version": "1.0.0",
-  "description": "originally created by idiots guide, but maintained and features added specifically for the Exodus Guild.",
+  "description": "Exodus Guild Bot",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "engines": {
-    "node": ">=16"
-  },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/darkcloud784/exodusbot.git"
+    "url": "git+https://github.com/darkcloud784/exodus_bot.git"
   },
-  "author": "",
-  "license": "MIT",
+  "author": "DarkCloud784",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/darkcloud784/exodus_bot/issues"
+  },
+  "homepage": "https://github.com/darkcloud784/exodus_bot#readme",
   "dependencies": {
     "@discordjs/builders": "^0.2.0",
-    "chalk": "^4.1.1",
-    "discord.js": "^13.0.1",
-    "enmap": "^5.8.5",
-    "inquirer": "^8.0.0",
+    "chalk": "^4.1.2",
+    "discord.js": "^13.1.0",
+    "enmap": "^5.8.7",
+    "fs": "0.0.1-security",
     "moment": "^2.29.1",
     "moment-duration-format": "^2.3.2"
-  },
-  "devDependencies": {
-    "eslint": "^7.30.0",
-    "eslint-config-airbnb-base": "^14.2.1",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.23.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.1.0"
   }
 }
