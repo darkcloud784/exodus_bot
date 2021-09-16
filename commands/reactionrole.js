@@ -1,12 +1,12 @@
-exports.run = async (message, args, Discord, client) => {
+exports.run = async (client, message, args, Discord) => {
     //async execute(message, args, Discord, client) {
         const channel = '865566305842757632';
 
         const memberRole = message.guild.roles.cache.find(role => role.name == "Members");
         const guestMember = message.guild.roles.cache.find(role => role.name == "Guest");
 
-        const memberEmoji = ':Exods:';
-        const guestEmoji = ':bust_in_silhouette:';
+        const memberEmoji = ':Exods:875054307978928239';
+        const guestEmoji = '👤';
 
         let embed = new Discord.MessageEmbed()
         .setColor('#e42643')
