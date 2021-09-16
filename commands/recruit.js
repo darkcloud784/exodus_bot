@@ -1,7 +1,7 @@
 exports.run = (client, message, args) => {
     
-    const settings = message.settings = client.getSettings(message.guild);
-    const recruitMsg = settings.recruitMessage
+    const settings = message.settings;
+    const recruitMsg = settings.get("recruitMessage");
     //const recruit = recruitMsg.replace("{{user}}", message.user.tag);
     message.channel.send(recruitMsg).catch(console.error);
 };
