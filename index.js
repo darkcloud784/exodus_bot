@@ -54,11 +54,13 @@ const init = async () => {
     });
   }
 
+
   // Now we load any **slash** commands you may have in the ./slash directory.
   const slashFiles = readdirSync("./slash").filter(file => file.endsWith(".js"));
   for (const file of slashFiles) {
     const command = require(`./slash/${file}`);
     const commandName = file.split(".")[0];
+  }
   // Then we load events, which will include our message and ready event.
   const eventFiles = readdirSync("./events/").filter(file => file.endsWith(".js"));
   for (const file of eventFiles) {
@@ -98,7 +100,6 @@ const init = async () => {
   // Here we login the client.
   client.login();
 
-// End top-level async/await function.
 };
-
+// End top-level async/await function.
 init();
