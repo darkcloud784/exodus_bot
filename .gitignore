@@ -6,6 +6,7 @@ yarn-debug.log*
 yarn-error.log*
 config.json
 config.js
+config.js.old
 data/
 test.js
 
