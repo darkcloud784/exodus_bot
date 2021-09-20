@@ -71,27 +71,7 @@ const init = async () => {
     // This line is awesome by the way. Just sayin'.
     client.on(eventName, event.bind(null, client));
   }  
-
-  // client.on("guildMemberAdd", (member) => {
-    
-  //   if (settings.newUserRolesEnabled !== "true") return;
-
-  //   member.send("Hello! I'm the Exodús server bot! I please reply with yes if you are an Exodús guild member. Not not, please reply with no so I can provide you with the appropriate role!");
-  //     if (message.content.toUpperCase() == 'YES' || message.content.toUpperCase() == 'Y' || message.content.toUpperCase() == 'YEP') {
-  //       message.channel.send(`Thanks! I have put you in the members role. You should now be able to see the appropriate channels!`)
-
-  //       var membersRole = member.guild.roles.find(role => role.name === "Members");
-  //       message.member.addRole(membersRole);
-
-
-  //   } else if (message.content.toUpperCase() == 'NO' || message.content.toUpperCase() == 'N' || message.content.toUpperCase() == 'NOPE') {
-  //       message.channel.send(`Thanks! I have put you in the Guests role. You should now be able to see the appropriate channels!`)
-        
-  //       var membersRole = member.guild.roles.find(role => role.name === "Guests");
-  //       message.member.addRole(guestRole);
-  //   }
-  // });
-
+  
   // Threads are currently in BETA.
   // This event will fire when a thread is created, if you want to expand
   // the logic, throw this in it's own event file like the rest.

@@ -2,6 +2,7 @@ const logger = require("../modules/Logger.js");
 const { getSettings, permlevel } = require("../modules/functions.js");
 const config = require("../config.js");
 
+
 // The MESSAGE event runs anytime a message is received
 // Note that due to the binding of client to every event, every event
 // goes `client, other, args` when this function is run.
@@ -67,7 +68,7 @@ This command requires level ${container.levelCache[cmd.conf.permLevel]} (${cmd.c
   // To simplify message arguments, the author's level is now put on level (not member so it is supported in DMs)
   // The "level" command module argument will be deprecated in the future.
   message.author.permLevel = level;
-  
+
   message.flags = [];
   while (args[0] && args[0][0] === "-") {
     message.flags.push(args.shift().slice(1));
