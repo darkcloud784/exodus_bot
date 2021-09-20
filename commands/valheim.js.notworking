@@ -1,4 +1,5 @@
 const fetch = require('node-fetch');
+
 exports.run = (client, message, args) => { 
     function checkStatus(res) {
         if (res.ok) {
