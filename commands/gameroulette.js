@@ -1,5 +1,5 @@
 const fs = require('fs');
-const configPath = '../games.json';
+const configPath = '../app/exodusbot/games.json';
 const rawdata = fs.readFileSync(configPath);
 const games = JSON.parse(rawdata);
 async function writeConfig(games) {
