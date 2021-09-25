@@ -3,7 +3,6 @@ const { getSettings, permlevel } = require("../modules/functions.js");
 const config = require("../config.js");
 Discord = require('discord.js');
 
-
 // The MESSAGE event runs anytime a message is received
 // Note that due to the binding of client to every event, every event
 // goes `client, other, args` when this function is run.
@@ -89,10 +88,12 @@ This command requires level ${container.levelCache[cmd.conf.permLevel]} (${cmd.c
     message.channel.send({ content: `There was a problem with your request.\n\`\`\`${e.message}\`\`\`` })
       .catch(e => console.error("An error occurred replying on an error", e));
   }
+  
   if (message.author.bot) return;
+  const attachment = new Discord.MessageAttachment('../images/ayy.jpg', 'ayy.jpg');
   const embed = new Discord.MessageEmbed()
-    .setTitle('ayy')
-    .attachFiles('../images/ayy.jpg')
+    .setTitle('Ayy lmao')
+    .attachFiles(attachment)
     .setImage('attachment://ayy.jpg');
   if (message.content.includes('ayy') || message.content.includes('Ayy')) {
     console.log("well we can see ayy.")
