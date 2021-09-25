@@ -1,6 +1,7 @@
 const logger = require("../modules/Logger.js");
 const { getSettings, permlevel } = require("../modules/functions.js");
 const config = require("../config.js");
+Discord = require('discord.js');
 
 
 // The MESSAGE event runs anytime a message is received
@@ -87,5 +88,21 @@ This command requires level ${container.levelCache[cmd.conf.permLevel]} (${cmd.c
     console.error(e);
     message.channel.send({ content: `There was a problem with your request.\n\`\`\`${e.message}\`\`\`` })
       .catch(e => console.error("An error occurred replying on an error", e));
+  }
+  if (message.author.bot) return;
+  const embed = new Discord.MessageEmbed()
+    .setTitle('ayy')
+    .attachFiles('../images/ayy.jpg')
+    .setImage('attachment://ayy.jpg');
+  if (message.content.includes('ayy') || message.content.includes('Ayy')) {
+    console.log("well we can see ayy.")
+    var lmaos = [
+      'ayy lmao! :alien:',
+      'remember the ayylmao! :alien: :face_with_cowboy_hat:',
+      ('Your new name is ' + "@" + message.author.username + 'ayy Lmao! :alien:'),
+      ('Ayy lmao' + message.channel.send({ embed }))
+    ];
+    var lmao = lmaos[Math.floor(Math.random() * lmaos.length)];
+    message.reply(lmao);
   }
 };
