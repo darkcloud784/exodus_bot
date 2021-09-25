@@ -1,7 +1,7 @@
 Discord = require('discord.js');
 
 
-module.exports = (client, message) => {
+module.exports = async (client, message) => {
   if (message.author.bot) return;
   const embed = new Discord.MessageEmbed()
     .setTitle('ayy')
