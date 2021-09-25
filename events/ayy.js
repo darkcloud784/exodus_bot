@@ -8,6 +8,7 @@ module.exports = async (client, message) => {
     .attachFiles('../images/ayy.jpg')
     .setImage('attachment://ayy.jpg');
   if (message.content.includes('ayy') || message.content.includes('Ayy')) {
+    console.log("well we can see ayy.")
     var lmaos = [
       'ayy lmao! :alien:',
       'remember the ayylmao! :alien: :face_with_cowboy_hat:',
