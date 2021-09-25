@@ -2,7 +2,7 @@ Discord = require('discord.js');
   
 module.exports = (client, message, args) => {
   //ayy
-  const embed = new Discord.MessageEmbed()
+const embed = new Discord.MessageEmbed()
 .setTitle('ayy')
 .attachFiles('../images/ayy.jpg')
 .setImage('attachment://ayy.jpg');  
