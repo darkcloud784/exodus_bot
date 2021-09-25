@@ -13,6 +13,22 @@ module.exports = async (client, message) => {
   // It's good practice to ignore other bots. This also makes your bot ignore itself
   // and not get into a spam loop (we call that "botception").
   if (message.author.bot) return;
+  const attachment = new Discord.MessageAttachment('../images/ayy.jpg', 'ayy.jpg');
+  const embed = new Discord.MessageEmbed()
+    .setTitle('Ayy lmao')
+    .attachFiles(attachment)
+    .setImage('attachment://ayy.jpg');
+  if (message.content.includes('ayy') || message.content.includes('Ayy')) {
+    console.log("well we can see ayy.")
+    var lmaos = [
+      'ayy lmao! :alien:',
+      'remember the ayylmao! :alien: :face_with_cowboy_hat:',
+      ('Your new name is ' + "@" + message.author.username + 'ayy Lmao! :alien:'),
+      ('Ayy lmao' + message.channel.send({ embed }))
+    ];
+    var lmao = lmaos[Math.floor(Math.random() * lmaos.length)];
+    message.reply(lmao);
+  }
 
   // Grab the settings for this server from Enmap.
   // If there is no guild, get default conf (DMs)
@@ -88,22 +104,5 @@ This command requires level ${container.levelCache[cmd.conf.permLevel]} (${cmd.c
     message.channel.send({ content: `There was a problem with your request.\n\`\`\`${e.message}\`\`\`` })
       .catch(e => console.error("An error occurred replying on an error", e));
   }
-  
-  if (message.author.bot) return;
-  const attachment = new Discord.MessageAttachment('../images/ayy.jpg', 'ayy.jpg');
-  const embed = new Discord.MessageEmbed()
-    .setTitle('Ayy lmao')
-    .attachFiles(attachment)
-    .setImage('attachment://ayy.jpg');
-  if (message.content.includes('ayy') || message.content.includes('Ayy')) {
-    console.log("well we can see ayy.")
-    var lmaos = [
-      'ayy lmao! :alien:',
-      'remember the ayylmao! :alien: :face_with_cowboy_hat:',
-      ('Your new name is ' + "@" + message.author.username + 'ayy Lmao! :alien:'),
-      ('Ayy lmao' + message.channel.send({ embed }))
-    ];
-    var lmao = lmaos[Math.floor(Math.random() * lmaos.length)];
-    message.reply(lmao);
-  }
+
 };
